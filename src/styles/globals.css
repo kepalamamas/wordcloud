@@ -1427,19 +1427,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .RightToLeft {
-  /* animation: RightToLeft 20s infinite linear; */
+  animation: RightToLeft 30s infinite linear;
 }
 
 .LeftToRight {
-  /* animation: LeftToRight 25s infinite linear; */
+  animation: LeftToRight 50s infinite linear;
 }
 
 @keyframes  RightToLeft {
   from {
-    transform: translateX(70%);
+    transform: translateX(80%);
   }
   to {
-    transform: translateX(-70%);
+    transform: translateX(-80%);
   }
 }
 
