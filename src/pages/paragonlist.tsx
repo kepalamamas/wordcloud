@@ -148,15 +148,6 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
           <div className='RightToLeft'>
             <p id='line33'></p>
           </div>
-          {/* {data.map((dat) => {
-            return (
-              <div 
-              className={dat.id.valueOf() % 2 == 0 ? "RightToLeft": "LeftToRight"} 
-              style={{marginLeft: `-${5*(dat.id.valueOf() % 100)}px`}}>
-                <p>{dat.kata}</p>
-              </div>
-            )
-          })} */}
         </div>
       </div>
     </>

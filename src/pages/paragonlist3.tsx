@@ -2,6 +2,7 @@ import axios from 'axios';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Paragon } from '../type';
+import $ from 'jquery';
 
 interface IParagonListProps {
 }
@@ -13,7 +14,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://sodfestival.online/data3?_sort=id&_order=desc&_limit=10`)
+        .get(`https://sodfestival.online/data3?_sort=id&_order=asc`)
         .then((res) => {
           setData(res.data);
           setIsLoaded(true);
@@ -21,48 +22,131 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         .catch((err) => console.log(err));
       setInterval(() => {
         axios
-          .get(`https://sodfestival.online/data3?_sort=id&_order=desc&_limit=10`)
+          .get(`https://sodfestival.online/data3?_sort=id&_order=asc`)
           .then((res) => {
             setData(res.data);
           })
           .catch((err) => console.log(err))
-      }, 20000);
+      }, 30000);
     }
   }, []);
+
+  useEffect(() => {
+    for (let i = 1; i < 34; i++) {
+      $(`#line${i}`).html("");
+    }
+    data.forEach(function (value, i) {
+      const n = (i % 33) + 1; 
+      var inner = document.getElementById(`line${n}`)?.innerHTML;
+      $(`#line${n}`).html(`${inner}&ensp;${value.kata}`);
+    })
+  }, [data]);
 
   return (
     <>
       <div className='scroll-list'>
+        <div className='scroll-caption'>
+          <h1>WHAT IS THE BEST VERSION OF YOU?</h1>
+        </div>
         <div className="scroll">
-          <div className="RightToLeft">
-            <p>{data.length > 0 ? data[0].kata : ""}</p>
+          <div className='RightToLeft'>
+            <p id='line1'></p>
           </div>
-          <div className="LeftToRight">
-            <p>{data.length > 1 ? data[1].kata : ""}</p>
+          <div className='LeftToRight'>
+            <p id='line2'></p>
           </div>
-          <div className="RightToLeft">
-            <p>{data.length > 2 ? data[2].kata : ""}</p>
+          <div className='RightToLeft'>
+            <p id='line3'></p>
           </div>
-          <div className="LeftToRight">
-            <p>{data.length > 3 ? data[3].kata : ""}</p>
+          <div className='LeftToRight'>
+            <p id='line4'></p>
           </div>
-          <div className="RightToLeft">
-            <p>{data.length > 4 ? data[4].kata : ""}</p>
+          <div className='RightToLeft'>
+            <p id='line5'></p>
           </div>
-          <div className="LeftToRight">
-            <p>{data.length > 5 ? data[5].kata : ""}</p>
+          <div className='LeftToRight'>
+            <p id='line6'></p>
           </div>
-          <div className="RightToLeft">
-            <p>{data.length > 6 ? data[6].kata : ""}</p>
+          <div className='RightToLeft'>
+            <p id='line7'></p>
           </div>
-          <div className="LeftToRight">
-            <p>{data.length > 7 ? data[7].kata : ""}</p>
+          <div className='LeftToRight'>
+            <p id='line8'></p>
           </div>
-          <div className="RightToLeft">
-            <p>{data.length > 8 ? data[8].kata : ""}</p>
+          <div className='RightToLeft'>
+            <p id='line9'></p>
           </div>
-          <div className="LeftToRight">
-            <p>{data.length > 9 ? data[9].kata : ""}</p>
+          <div className='LeftToRight'>
+            <p id='line10'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line11'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line12'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line13'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line14'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line15'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line16'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line17'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line18'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line19'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line20'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line21'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line22'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line23'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line24'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line25'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line26'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line27'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line28'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line29'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line30'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line31'></p>
+          </div>
+          <div className='LeftToRight'>
+            <p id='line32'></p>
+          </div>
+          <div className='RightToLeft'>
+            <p id='line33'></p>
           </div>
         </div>
       </div>
