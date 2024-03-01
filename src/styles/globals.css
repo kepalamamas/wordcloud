@@ -1364,7 +1364,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  color: #ffffff;
 }
 
 .scroll {
@@ -1374,51 +1373,26 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .scroll div {
   display: flex;
-  gap: 2em;
+  gap: 0.8em;
+  justify-content: center;
 }
 
 .scroll p {
-  font-family: 'Titan One';
-  font-size: 2.5em;
-  color: #ffffff;
+  font-size: 0.8em;
+  color: white;
   font-weight: bold;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  line-height: 10px;
-}
-
-.RightToLeft {
-  animation: RightToLeft 20s infinite linear;
+  margin-top: 0.8vh;
+  margin-bottom: 0.8vh;
+  line-height: 9px;
+  text-shadow: 0 0 2px #6a80bc, 0 0 2px #6a80bc;
 }
 
 .RightToLeft p {
   font-family: "Figtree";
 }
 
-@keyframes  RightToLeft {
-  from {
-    transform: translateX(200%);
-  }
-  to {
-    transform: translateX(-200%);
-  }
-}
-
-.LeftToRight {
-  animation: LeftToRight 20s infinite linear;
-}
-
 .LeftToRight p {
   font-family: "Figtree";
-}
-
-@keyframes  LeftToRight {
-  from {
-    transform: translateX(-200%);
-  }
-  to {
-    transform: translateX(200%);
-  }
 }
 
 .row {
@@ -1440,14 +1414,40 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .scroll-caption {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
   width: 100vw;
   text-align: center;
 }
 
 .scroll-caption h1 {
   font-family: 'Titan One';
-  font-size: 4rem;
-  font-weight: 400;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 5px #6a80bc, 0 0 5px #6a80bc;
+}
+
+.RightToLeft {
+  /* animation: RightToLeft 20s infinite linear; */
+}
+
+.LeftToRight {
+  /* animation: LeftToRight 25s infinite linear; */
+}
+
+@keyframes  RightToLeft {
+  from {
+    transform: translateX(70%);
+  }
+  to {
+    transform: translateX(-70%);
+  }
+}
+
+@keyframes  LeftToRight {
+  from {
+    transform: translateX(-80%);
+  }
+  to {
+    transform: translateX(80%);
+  }
 }

@@ -9,11 +9,13 @@ interface IParagonListProps {
 const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   const [data, setData] = useState<Paragon[]>([]);
   const [isLoaded, setIsLoaded] = useState(Boolean);
+  const [curRow, setCurRow] = useState(1);
+  const [curCol, setCurCol] = useState(1)
 
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://sodfestival.online/data1?_sort=id&_order=desc`)
+        .get(`https://sodfestival.online/data1?_sort=id&_order=asc`)
         .then((res) => {
           setData(res.data);
           setIsLoaded(true);
@@ -21,7 +23,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         .catch((err) => console.log(err));
       setInterval(() => {
         axios
-          .get(`https://sodfestival.online/data1?_sort=id&_order=desc`)
+          .get(`https://sodfestival.online/data1?_sort=id&_order=asc`)
           .then((res) => {
             setData(res.data);
           })
@@ -37,36 +39,15 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
           <h1>WHAT IS THE BEST VERSION OF YOU?</h1>
         </div>
         <div className="scroll">
-          <div className="RightToLeft">
-            <p>{data.length > 0 ? data[0].kata : ""}</p>
-          </div>
-          <div className="LeftToRight">
-            <p>{data.length > 1 ? data[1].kata : ""}</p>
-          </div>
-          <div className="RightToLeft">
-            <p>{data.length > 2 ? data[2].kata : ""}</p>
-          </div>
-          <div className="LeftToRight">
-            <p>{data.length > 3 ? data[3].kata : ""}</p>
-          </div>
-          <div className="RightToLeft">
-            <p>{data.length > 4 ? data[4].kata : ""}</p>
-          </div>
-          <div className="LeftToRight">
-            <p>{data.length > 5 ? data[5].kata : ""}</p>
-          </div>
-          <div className="RightToLeft">
-            <p>{data.length > 6 ? data[6].kata : ""}</p>
-          </div>
-          <div className="LeftToRight">
-            <p>{data.length > 7 ? data[7].kata : ""}</p>
-          </div>
-          <div className="RightToLeft">
-            <p>{data.length > 8 ? data[8].kata : ""}</p>
-          </div>
-          <div className="LeftToRight">
-            <p>{data.length > 9 ? data[9].kata : ""}</p>
-          </div>
+          {data.map((dat) => {
+            return (
+              <div 
+              className={dat.id.valueOf() % 2 == 0 ? "RightToLeft": "LeftToRight"} 
+              style={{marginLeft: `-${5*(dat.id.valueOf() % 100)}px`}}>
+                <p>{dat.kata}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </>
