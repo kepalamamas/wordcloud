@@ -1366,15 +1366,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
   overflow: hidden;
 }
 
-.scroll {
+/* .scroll {
   white-space: nowrap;
   margin: 0 20px;
-}
+} */
 
 .scroll div {
   display: flex;
   gap: 0.8em;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .scroll p {
