@@ -318,7 +318,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   animation-delay: 0.5s;
   animation-name: fadeInUp;
   animation-fill-mode: both;
-  background-image: url("../../public/assets/backgroundHeader.png");
+  /* background-image: url("../../public/assets/backgroundHeader.png"); */
   background-size: cover; /* Adjusts the background image size to cover the container */
   background-position: center; /* Centers the background image */
   /* Additional background properties */
