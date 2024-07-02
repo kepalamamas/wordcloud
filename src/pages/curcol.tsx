@@ -1,9 +1,7 @@
 import axios from "axios";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import * as React from "react";
-import {useState} from 'react'
-import logoNovo from "../../public/assets/Paragon/LogoNovoClub.png"
+import { useState } from 'react';
 
 interface IFormParagonProps {}
 
@@ -22,7 +20,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 kata,
             };
 
-            const postResponse = await axios.post("https://konseruntuk.online/data1", postData, {
+            const postResponse = await axios.post("https://konseruntuk.online/api/data1", postData, {
                 headers: { "Content-Type": "application/json" },
             });
 
