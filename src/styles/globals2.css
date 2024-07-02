@@ -8,9 +8,14 @@
   src: url("../../public/assets/font/TitanOne-Regular.ttf") format("truetype");
 }
 
+@font-face{
+  font-family: "Ortland";
+  src: url("../../public/assets/font/Ortland.otf") format("truetype");
+}
+
 .containerFormParagon {
   display: flex;
-  font-family: "TitanOne";
+  font-family: 'Ortland';
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -19,9 +24,10 @@
   animation-delay: 0.5s;
   animation-name: fadeInUp;
   animation-fill-mode: both;
-  background-color: #a3d7e2;
+  background: url("../../public/assets/curcol/curcol.jpg");
   background-size: cover; /* Adjusts the background image size to cover the container */
   background-position: center; /* Centers the background image */
+  background-repeat: no-repeat;
   /* Additional background properties */
   background-repeat: no-repeat; /* Prevents the background image from repeating */
 }
@@ -102,10 +108,11 @@
 }
 
 .submit-button {
-  font-family: "FigTree";
+  font-family: 'Ortland';
   font-size: 1.2rem;
   background-color: #687ebd;
   color: #ffffff;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 900px) {
