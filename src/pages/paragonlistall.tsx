@@ -17,19 +17,19 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://sodfestival.online/data1?_sort=id&_order=desc`)
+        .get(`http://localhost:3001/data1?_sort=id&_order=desc`)
         .then((res) => {
           setData1(res.data);
         })
         .catch((err) => console.log(err));
       axios
-        .get(`https://sodfestival.online/data2?_sort=id&_order=desc`)
+        .get(`http://localhost:3001?_sort=id&_order=desc`)
         .then((res) => {
           setData2(res.data);
         })
         .catch((err) => console.log(err));
       axios
-        .get(`https://sodfestival.online/data3?_sort=id&_order=desc`)
+        .get(`http://localhost:3001?_sort=id&_order=desc`)
         .then((res) => {
           setData3(res.data);
         })
@@ -37,19 +37,19 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
       setIsLoaded(true);
       setInterval(() => {
         axios
-          .get(`https://sodfestival.online/data1?_sort=id&_order=desc`)
+          .get(`http://localhost:3001/data1?_sort=id&_order=desc`)
           .then((res) => {
             setData1(res.data);
           })
           .catch((err) => console.log(err));
         axios
-          .get(`https://sodfestival.online/data2?_sort=id&_order=desc`)
+          .get(`http://localhost:3001/data2?_sort=id&_order=desc`)
           .then((res) => {
             setData2(res.data);
           })
           .catch((err) => console.log(err));
         axios
-          .get(`https://sodfestival.online/data3?_sort=id&_order=desc`)
+          .get(`http://localhost:3001?_sort=id&_order=desc`)
           .then((res) => {
             setData3(res.data);
           })
@@ -69,7 +69,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
               return (
                 <div className='data-item' key={String(data.id)} onClick={() => {
                   router.push({
-                    pathname: "/paragondetail",
+                    pathname: "/curcoldetail",
                     query: { id: String(data.id) }
                   })
                 }}>{data.kata}</div>
