@@ -17,19 +17,19 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`http://localhost:3001/data1?_sort=id&_order=desc`)
+        .get(`https://konseruntuk.online/data1?_sort=id&_order=desc`)
         .then((res) => {
           setData1(res.data);
         })
         .catch((err) => console.log(err));
       axios
-        .get(`http://localhost:3001?_sort=id&_order=desc`)
+        .get(`https://konseruntuk.online/data2?_sort=id&_order=desc`)
         .then((res) => {
           setData2(res.data);
         })
         .catch((err) => console.log(err));
       axios
-        .get(`http://localhost:3001?_sort=id&_order=desc`)
+        .get(`https://konseruntuk.online/data3?_sort=id&_order=desc`)
         .then((res) => {
           setData3(res.data);
         })
@@ -37,19 +37,19 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
       setIsLoaded(true);
       setInterval(() => {
         axios
-          .get(`http://localhost:3001/data1?_sort=id&_order=desc`)
+          .get(`https://konseruntuk.online/data1?_sort=id&_order=desc`)
           .then((res) => {
             setData1(res.data);
           })
           .catch((err) => console.log(err));
         axios
-          .get(`http://localhost:3001/data2?_sort=id&_order=desc`)
+          .get(`https://konseruntuk.online/data2?_sort=id&_order=desc`)
           .then((res) => {
             setData2(res.data);
           })
           .catch((err) => console.log(err));
         axios
-          .get(`http://localhost:3001?_sort=id&_order=desc`)
+          .get(`https://konseruntuk.online/data3?_sort=id&_order=desc`)
           .then((res) => {
             setData3(res.data);
           })
