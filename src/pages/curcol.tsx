@@ -46,13 +46,14 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
             <div className="inputWrapper">
             <input 
                   type="text" 
-                  required value={kata} 
+                  required 
+                  value={kata} 
                   placeholder="Silahkan curcol..." 
                   onChange={(e) => setKata(e.target.value)}
                   maxLength={40}/>
             
-            {/* <p>You can submit more than one response.</p>
-            { berhasil ? (<p>Thankyou, we receive your input! Add another if you want</p>) : null } */}
+            <p>You can submit more than one response.</p>
+            { berhasil ? (<p>Thankyou, we receive your input! Add another if you want</p>) : null }
             <button className="submit-button">Submit</button>
             </div>
           </form>
