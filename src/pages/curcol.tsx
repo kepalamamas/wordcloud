@@ -1,7 +1,9 @@
 import axios from "axios";
+import Image from "next/image";
 import { useRouter } from "next/router";
 import * as React from "react";
 import { useState } from 'react';
+import logoCurcol from '../../public/assets/curcol/logoCurcol.png'
 
 interface IFormParagonProps {}
 
@@ -39,7 +41,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     <>
       <div className="containerFormParagon">
         <div className="containerInputFormParagon">
-          {/* <Image className="imageNovo" src={logoNovo} alt="logoNovo"></Image> */}
+          <Image className="imageNovo" src={logoCurcol} alt="logoNovo"></Image>
           <form className="formParagon" onSubmit={handleSubmit}>
             {/* <h1>Whats is the best version of you?</h1> */}
 
@@ -52,8 +54,8 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                   onChange={(e) => setKata(e.target.value)}
                   maxLength={40}/>
             
-            <p>You can submit more than one response.</p>
-            { berhasil ? (<p>Thankyou, we receive your input! Add another if you want</p>) : null }
+            {/* <p>You can submit more than one response.</p> */}
+            { berhasil ? (<p>Terima kasih!</p>) : null }
             <button className="submit-button">Submit</button>
             </div>
           </form>

@@ -8,14 +8,14 @@
   src: url("../../public/assets/font/TitanOne-Regular.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "Ortland";
   src: url("../../public/assets/font/Ortland.otf") format("truetype");
 }
 
 .containerFormParagon {
   display: flex;
-  font-family: 'Ortland';
+  font-family: "Ortland";
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -24,7 +24,8 @@
   animation-delay: 0.5s;
   animation-name: fadeInUp;
   animation-fill-mode: both;
-  background: url("../../public/assets/curcol/curcol.jpg");
+  padding-bottom: 10rem;
+  background: url("../../public/assets/curcol/bgForm.png");
   background-size: cover; /* Adjusts the background image size to cover the container */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat;
@@ -33,25 +34,27 @@
 }
 
 .containerInputFormParagon {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 0 7rem 7rem 7rem;
+  padding: 0 0rem 0rem 0rem;
   width: 100%;
 }
 
 .imageNovo {
-  height: 15rem;
-  width: auto;
-  object-fit: contain;
+  height: auto;
+  width: 25rem;
+  /* object-fit: contain; */
 }
 
 .formParagon {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  position: absolute;
+  top: 22rem;
 }
 
 .formParagon h1 {
@@ -108,11 +111,27 @@
 }
 
 .submit-button {
-  font-family: 'Ortland';
   font-size: 1.2rem;
-  background-color: #687ebd;
+  background-color: #df2f6d;
   color: #ffffff;
   cursor: pointer;
+  border: 2px solid #df2f6d; /* Border color matching the background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 20px; /* Add padding for better spacing */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.submit-button:hover {
+  background-color: #c0255b; /* Slightly darker background on hover */
+  border-color: #c0255b; /* Match border color to the new background color */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+.submit-button:active {
+  background-color: #a01f4a; /* Even darker background on click */
+  border-color: #a01f4a; /* Match border color to the new background color */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Smaller shadow on click */
 }
 
 input {
@@ -125,19 +144,22 @@ input::placeholder {
 
 @media only screen and (max-width: 900px) {
   .containerInputFormParagon {
-    padding: 0 4rem 4rem 4rem;
+    padding: 0 0rem 0rem 0rem;
   }
 
   .imageNovo {
     object-fit: contain;
-    height: 10rem;
+    /* width: 25rem; */
   }
 }
 
 @media only screen and (max-width: 816px) {
   .imageNovo {
-    object-fit: contain;
-    height: 10rem;
+    width: 18rem;
+  }
+
+  .formParagon {
+    top: 17rem;
   }
 }
 
@@ -169,5 +191,11 @@ input::placeholder {
   .submit-button {
     font-size: 1rem;
     width: 100%;
+  }
+
+  .containerFormParagon {
+    background: url("../../public/assets/curcol/bgHpForm.png") no-repeat center
+      center;
+    background-size: cover;
   }
 }
