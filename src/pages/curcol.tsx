@@ -1,7 +1,7 @@
 import axios from "axios";
 import Image from "next/image";
 import * as React from "react";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import logoCurcol from '../../public/assets/curcol/logoCurcol.png';
 
 interface IFormParagonProps { }
@@ -9,9 +9,27 @@ interface IFormParagonProps { }
 const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const [kata, setKata] = useState("");
   const [berhasil, setBerhasil] = useState(false);
+  const [error, setError] = useState("")
+
+  const containsProhibitedWords = (input: string) => {
+    const prohibitedWords = [
+        "Anjing", "Babi", "Monyet", "Kunyuk", "Bajingan", "Asu", "Bangsat",
+        "Kampret", "Perek", "Pecun", "Bencong", "Banci", "Jablay", "Maho",
+        "Bego", "Bodoh", "Idiot", "Geblek", "Goblok", "Sinting", "Orang Gila",
+        "Gila", "Sinting", "Tolol", "Sarap", "Udik", "Kampungan", "Budek",
+        "Bolot", "Jelek", "Setan", "Iblis", "Jahannam", "Dajjal", "Jin Tomang",
+        "Keparat", "Ngewe", "Ngentot", "Bejad", "Gembel", "Brengsek", "Tai"
+    ];
+    return prohibitedWords.some((word) => input.toLowerCase().includes(word.toLowerCase()));
+}
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (containsProhibitedWords(kata)) {
+      setError("Gaboleh kata kasar yah...");
+      return;
+  }
 
     try {
       const postData = {
@@ -31,6 +49,16 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     }
   }
 
+  useEffect(() => {
+    if (error) {
+        const timer = setTimeout(() => {
+            setError("");
+        }, 5000); // 5 seconds
+
+        return () => clearTimeout(timer); // Clear the timeout if the component unmounts or error changes
+    }
+}, [error]);
+
   return (
     <>
       <div className="containerFormParagon">
@@ -46,9 +74,8 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 value={kata}
                 placeholder="Silahkan curcol..."
                 onChange={(e) => setKata(e.target.value)}
-                maxLength={40} />
-
-              {/* <p>You can submit more than one response.</p> */}
+                maxLength={40} />              
+              {error ? (<p>{error}</p>) : null}
               {berhasil ? (<p>Terima kasih!</p>) : null}
               <button className="submit-button">Submit</button>
             </div>
