@@ -7,7 +7,7 @@ body {
   scroll-behavior: smooth !important;
 }
 
-@font-face{
+@font-face {
   font-family: "Literata", sans-serif;
   src: url("../../public/assets/font/Literata-VariableFont.ttf") format("truetype");
 }
@@ -17,17 +17,17 @@ body {
   src: url("../../public/assets/font/DaysOne-Regular.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "Titan One";
   src: url("../../public/assets/font/TitanOne-Regular.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "Figtree";
   src: url("../../public/assets/font/Figtree-VariableFont_wght.ttf") format("truetype");
 }
 
-@font-face{
+@font-face {
   font-family: "Ortland";
   src: url("../../public/assets/font/Ortland.otf") format("truetype");
 }
@@ -319,10 +319,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   animation-name: fadeInUp;
   animation-fill-mode: both;
   /* background-image: url("../../public/assets/backgroundHeader.png"); */
-  background-size: cover; /* Adjusts the background image size to cover the container */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  /* Adjusts the background image size to cover the container */
+  background-position: center;
+  /* Centers the background image */
   /* Additional background properties */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-repeat: no-repeat;
+  /* Prevents the background image from repeating */
 }
 
 /* subheader */
@@ -336,10 +339,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   align-items: center;
   color: white;
   /* background-image: url("../../public/assets/backgroundAbout.png"); */
-  background-size: cover; /* Adjusts the background image size to cover the container */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  /* Adjusts the background image size to cover the container */
+  background-position: center;
+  /* Centers the background image */
   /* Additional background properties */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-repeat: no-repeat;
+  /* Prevents the background image from repeating */
   padding-bottom: 2rem;
   border-bottom: 0.5px solid #e5dcc8;
   animation-duration: 1.8s;
@@ -364,6 +370,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -412,30 +419,35 @@ Note: Beware of modifying this element as it can break the animations - you shou
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
+
   20% {
     border-top-color: white;
     border-right-color: transparent;
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
+
   40% {
     border-top-color: white;
     border-right-color: white;
     border-bottom-color: transparent;
     border-left-color: transparent;
   }
+
   60% {
     border-top-color: white;
     border-right-color: white;
     border-bottom-color: white;
     border-left-color: transparent;
   }
+
   80% {
     border-top-color: white;
     border-right-color: white;
     border-bottom-color: white;
     border-left-color: white;
   }
+
   100% {
     border-top-color: white;
     border-right-color: white;
@@ -580,10 +592,13 @@ Note: Beware of modifying this element as it can break the animations - you shou
   animation-name: fadeInUp;
   animation-fill-mode: both;
   /* background-image: url("../../public/assets/backgroundVideo.png"); */
-  background-size: cover; /* Adjusts the background image size to cover the container */
-  background-position: center; /* Centers the background image */
+  background-size: cover;
+  /* Adjusts the background image size to cover the container */
+  background-position: center;
+  /* Centers the background image */
   /* Additional background properties */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-repeat: no-repeat;
+  /* Prevents the background image from repeating */
 }
 
 .judulVideo {
@@ -714,7 +729,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   justify-content: center;
 }
 
-.containerUtamaImagePopUp{
+.containerUtamaImagePopUp {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -931,7 +946,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   /* text-decoration: underline; */
 }
 
-.icon{
+.icon {
   width: 1.3rem;
 }
 
@@ -950,7 +965,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   width: 100%;
 
   /* Center slide text vertically */
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -962,61 +977,62 @@ Note: Beware of modifying this element as it can break the animations - you shou
   width: 100%;
   height: 100%;
   object-fit: cover;
-  width: 20rem !important; 
+  width: 20rem !important;
   height: 20rem !important;
   padding: 0rem !important;
   margin: 0rem !important;
 }
+
 /* swiper */
 
-@media only screen and (max-width: 1300px){
-  .containerVideoHome{
+@media only screen and (max-width: 1300px) {
+  .containerVideoHome {
     padding-left: 5%;
     padding-right: 5%;
   }
 
-  .containerCounterUp{
+  .containerCounterUp {
     gap: 10rem;
   }
 
-  .containerEvent{
+  .containerEvent {
     height: 21rem;
   }
 
-  .partnerContent{
+  .partnerContent {
     padding-left: 8rem;
   }
 
-  .contentOurBrand{
+  .contentOurBrand {
     padding-left: 10rem;
   }
 
-  .containerBrand{
+  .containerBrand {
     width: 25%;
   }
 
-  .containerBrand2{
+  .containerBrand2 {
     width: 35%;
   }
 
-  .judulValue{
+  .judulValue {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 
-  .containerPartner{
+  .containerPartner {
     width: 14%;
   }
 
-  .popUpBrand{
+  .popUpBrand {
     top: 5%;
     left: 27.5%;
     padding-bottom: 2rem;
   }
 
-  .containerEvent{
+  .containerEvent {
     height: 19.5rem;
   }
 }
@@ -1055,11 +1071,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
   .contentOurBrand2 {
     padding-left: 4rem;
-    padding-right: 4rem;    
+    padding-right: 4rem;
     gap: 4rem 6rem;
   }
 
-  .containerValue{
+  .containerValue {
     width: 30%;
     height: 15rem;
   }
@@ -1095,25 +1111,25 @@ Note: Beware of modifying this element as it can break the animations - you shou
     animation-fill-mode: both;
   }
 
-  .partnerContent{
+  .partnerContent {
     padding-left: 3rem;
     padding-right: 2rem;
   }
 
-  .containerPartner{
+  .containerPartner {
     width: 20%;
   }
 
-  .textContent{
+  .textContent {
     width: 60%;
   }
 
-  .containerHomeValue{
+  .containerHomeValue {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  .judulValue{
+  .judulValue {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1121,84 +1137,84 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 }
 
-@media only screen and (max-width: 816px){
-  .contentOurBrand{
+@media only screen and (max-width: 816px) {
+  .contentOurBrand {
     padding-left: 4rem;
   }
 
-  .containerBrand{
+  .containerBrand {
     width: 26%;
   }
 
-  .judulBrand{
-   font-size: 0.9rem;
+  .judulBrand {
+    font-size: 0.9rem;
   }
 
-  .containerVideoHome{
+  .containerVideoHome {
     padding-left: 5%;
     padding-right: 5%;
   }
 
-  .containerEvent{
+  .containerEvent {
     height: 13rem;
   }
 
-  .popUpBrand{
+  .popUpBrand {
     left: 13%;
   }
 }
 
 @media only screen and (max-width: 780px) {
-  .subHeader2{
+  .subHeader2 {
     height: 15rem;
   }
 
-  .containerCounterUp{
+  .containerCounterUp {
     height: 12rem;
   }
 
-  .countUpNum{
+  .countUpNum {
     font-size: 3rem;
   }
-  
-  .pCounter{
+
+  .pCounter {
     font-size: 1.5rem;
   }
 
-  .popUpBrand{
+  .popUpBrand {
     left: 11%;
   }
-  
-  .containerEvent{
+
+  .containerEvent {
     height: 12rem;
   }
 
-  .containerBrand{
+  .containerBrand {
     width: 26%;
   }
 
-  .containerBrand2{
+  .containerBrand2 {
     width: 40%;
   }
 
-  .partnerContent{
+  .partnerContent {
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
-  .judulBrand{
+  .judulBrand {
     font-size: 0.7rem;
   }
 
 }
 
-@media only screen and (max-width: 760px){
-  .partnerContent{
+@media only screen and (max-width: 760px) {
+  .partnerContent {
     padding-left: 2rem;
     padding-right: 1rem;
   }
 
-  .containerPartner{
+  .containerPartner {
     width: 19%;
   }
 }
@@ -1208,23 +1224,23 @@ Note: Beware of modifying this element as it can break the animations - you shou
     font-size: 15px;
   }
 
-  h1{
+  h1 {
     font-size: 1.8rem;
   }
 
-  h2{
+  h2 {
     font-size: 1.6rem;
   }
 
-  h3{
+  h3 {
     font-size: 1.2rem;
   }
 
-  .textJudul{
+  .textJudul {
     font-size: 1.6rem;
   }
 
-  .textContent{
+  .textContent {
     font-size: 1rem;
   }
 
@@ -1284,7 +1300,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .counterItem {
     width: 40%;
   }
-  
+
   .popUpBrand {
     position: fixed;
     top: 13%;
@@ -1292,7 +1308,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     transform: translate(-50%, -50%);
     width: 300px;
     padding-left: 1rem;
-    padding-right: 1rem;  
+    padding-right: 1rem;
     padding-top: 0.5rem;
     padding-bottom: 1rem;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
@@ -1335,19 +1351,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
     height: 6rem;
   }
 
-  .containerFooter{
+  .containerFooter {
     padding-right: 1rem;
   }
 
-  .textContent{
+  .textContent {
     width: 60%;
   }
 
-  .textValue{
+  .textValue {
     width: 80%;
   }
-  
-  .containerHomeValue{
+
+  .containerHomeValue {
     padding-top: 0rem;
     gap: 0rem;
   }
@@ -1371,10 +1387,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
   overflow: hidden;
 }
 
-/* .scroll {
-  white-space: nowrap;
-  margin: 0 20px;
-} */
+.scroll {
+  height: 70vh;
+  margin-top: 30vh;
+}
 
 .scroll div {
   display: flex;
@@ -1441,19 +1457,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
   animation: LeftToRight 50s infinite linear;
 }
 
-@keyframes  RightToLeft {
+@keyframes RightToLeft {
   from {
     transform: translateX(80%);
   }
+
   to {
     transform: translateX(-80%);
   }
 }
 
-@keyframes  LeftToRight {
+@keyframes LeftToRight {
   from {
     transform: translateX(-80%);
   }
+
   to {
     transform: translateX(80%);
   }

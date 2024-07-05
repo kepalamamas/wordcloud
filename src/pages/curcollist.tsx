@@ -2,7 +2,6 @@ import axios from 'axios';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Paragon } from '../type';
-import $ from 'jquery';
 import move from './components/mover/RandomObjectMover';
 
 interface IParagonListProps {
@@ -15,7 +14,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://konseruntuk.online/api/data1?_sort=id&_order=asc`)
+        .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=50`)
         .then((res) => {
           setData(res.data);
           setIsLoaded(true);
@@ -23,7 +22,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         .catch((err) => console.log(err));
       setInterval(() => {
         axios
-          .get(`https://konseruntuk.online/api/data1?_sort=id&_order=asc`)
+          .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=50`)
           .then((res) => {
             setData(res.data);
           })
@@ -42,7 +41,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     <>
       <script type="text/javascript" src="src/pages/components/mover/RandomObjectMover.js"></script>
       <div className='scroll-list'>
-        <div className="scroll">
+        <div className="scroll" id='scroll'>
           {data.map((x, idx) => (
             <div>
               <p id={`kata${idx}`}>{x.kata}</p>

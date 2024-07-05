@@ -1,41 +1,35 @@
 import axios from "axios";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import * as React from "react";
 import { useState } from 'react';
-import logoCurcol from '../../public/assets/curcol/logoCurcol.png'
+import logoCurcol from '../../public/assets/curcol/logoCurcol.png';
 
-interface IFormParagonProps {}
+interface IFormParagonProps { }
 
 const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
-    const [kata, setKata] = useState("")
-    const [isPending, setIsPending] = useState(false)
-    const [berhasil, setBerhasil] = useState(false)
+  const [kata, setKata] = useState("");
+  const [berhasil, setBerhasil] = useState(false);
 
-    const router = useRouter()
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        
-        try {
-            const postData = {
-                kata,
-            };
+    try {
+      const postData = {
+        kata,
+      };
 
-            const postResponse = await axios.post("https://konseruntuk.online/api/data1", postData, {
-                headers: { "Content-Type": "application/json" },
-            });
+      const postResponse = await axios.post("https://konseruntuk.online/api/data1", postData, {
+        headers: { "Content-Type": "application/json" },
+      });
 
-            if (postResponse.status === 201) {
-              setBerhasil(true)
-              setKata("")
-            }
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setIsPending(true);
-        }
+      if (postResponse.status === 201) {
+        setBerhasil(true)
+        setKata("")
+      }
+    } catch (error) {
+      console.error(error);
     }
+  }
 
   return (
     <>
@@ -46,17 +40,17 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
             {/* <h1>Whats is the best version of you?</h1> */}
 
             <div className="inputWrapper">
-            <input 
-                  type="text" 
-                  required 
-                  value={kata} 
-                  placeholder="Silahkan curcol..." 
-                  onChange={(e) => setKata(e.target.value)}
-                  maxLength={40}/>
-            
-            {/* <p>You can submit more than one response.</p> */}
-            { berhasil ? (<p>Terima kasih!</p>) : null }
-            <button className="submit-button">Submit</button>
+              <input
+                type="text"
+                required
+                value={kata}
+                placeholder="Silahkan curcol..."
+                onChange={(e) => setKata(e.target.value)}
+                maxLength={40} />
+
+              {/* <p>You can submit more than one response.</p> */}
+              {berhasil ? (<p>Terima kasih!</p>) : null}
+              <button className="submit-button">Submit</button>
             </div>
           </form>
         </div>

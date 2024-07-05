@@ -93,7 +93,7 @@ RandomObjectMover.prototype.stop = function () {
 }
 
 const move = (id) => {
-  var x = new RandomObjectMover(document.getElementById(id), window);
+  var x = new RandomObjectMover(document.getElementById(id), document.getElementById('scroll'));
   x.start();
 };
 
