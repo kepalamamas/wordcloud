@@ -32,7 +32,7 @@ const ParagonDetail: React.FunctionComponent<IParagonDetailProps> = (props) => {
             .then((res) => {
                 if(res.status === 200){
                     alert("berhasil delete data")
-                    router.push("/paragonlistall")
+                    router.push("/curcollistall")
                 }
             })
             .catch((err) => console.log(err))
