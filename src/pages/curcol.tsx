@@ -103,9 +103,9 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     if (error) {
       const timer = setTimeout(() => {
         setError("");
-      }, 5000); // 5 seconds
+      }, 5000); 
 
-      return () => clearTimeout(timer); // Clear the timeout if the component unmounts or error changes
+      return () => clearTimeout(timer);
     }
   }, [error]);
 
