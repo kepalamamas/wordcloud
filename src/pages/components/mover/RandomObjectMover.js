@@ -2,7 +2,7 @@ function RandomObjectMover(obj, container) {
   this.$object = obj;
   this.$container = container;
   this.container_is_window = container === window;
-  this.pixels_per_second = 250;
+  this.pixels_per_second = 100;
   this.current_position = { x: 0, y: 0 };
   this.is_running = false;
 }
@@ -23,8 +23,8 @@ RandomObjectMover.prototype._getContainerDimensions = function () {
 RandomObjectMover.prototype._generateNewPosition = function () {
   // Get container dimensions minus div size
   var containerSize = this._getContainerDimensions();
-  var availableHeight = containerSize.height - this.$object.clientHeight;
-  var availableWidth = containerSize.width - this.$object.clientHeight;
+  var availableHeight = containerSize.height - this.$object.clientHeight - 200;
+  var availableWidth = containerSize.width - this.$object.clientHeight - 200;
 
   // Pick a random place in the space
   var y = Math.floor(Math.random() * availableHeight);
