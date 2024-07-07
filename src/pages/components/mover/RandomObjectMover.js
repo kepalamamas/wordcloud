@@ -2,7 +2,7 @@ function RandomObjectMover(obj, container) {
   this.$object = obj;
   this.$container = container;
   this.container_is_window = container === window;
-  this.pixels_per_second = 100;
+  this.pixels_per_second = 80;
   this.current_position = { x: 0, y: 0 };
   this.is_running = false;
 }
