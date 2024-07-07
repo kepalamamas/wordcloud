@@ -41,6 +41,7 @@ const prohibitedWords = [
   "Gembel",
   "Brengsek",
   "Tai",
-  "Kontol"
+  "Kontol",
+  "Memek"
 ];
 export default prohibitedWords;
