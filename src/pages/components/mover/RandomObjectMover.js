@@ -24,7 +24,7 @@ RandomObjectMover.prototype._generateNewPosition = function () {
   // Get container dimensions minus div size
   var containerSize = this._getContainerDimensions();
   var availableHeight = containerSize.height - this.$object.clientHeight - 200;
-  var availableWidth = containerSize.width - this.$object.clientHeight - 200;
+  var availableWidth = containerSize.width - this.$object.clientWidth;
 
   // Pick a random place in the space
   var y = Math.floor(Math.random() * availableHeight);

@@ -14,7 +14,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=50`)
+        .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=20`)
         .then((res) => {
           setData(res.data);
           setIsLoaded(true);
@@ -22,7 +22,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         .catch((err) => console.log(err));
       setInterval(() => {
         axios
-          .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=50`)
+          .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=20`)
           .then((res) => {
             setData(res.data);
           })
