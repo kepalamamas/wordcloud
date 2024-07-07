@@ -1390,6 +1390,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .scroll {
   height: 70vh;
   margin-top: 30vh;
+  font-size: 2.2rem;
 }
 
 .scroll div {
