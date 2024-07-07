@@ -9,8 +9,8 @@ interface IParagonListProps {
 
 const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   const [data1, setData1] = useState<Paragon[]>([]);
-  const [data2, setData2] = useState<Paragon[]>([]);
-  const [data3, setData3] = useState<Paragon[]>([]);
+  // const [data2, setData2] = useState<Paragon[]>([]);
+  // const [data3, setData3] = useState<Paragon[]>([]);
   const [isLoaded, setIsLoaded] = useState(Boolean);
   const router = useRouter();
 
@@ -65,7 +65,6 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
       data1.forEach((data) => {
         axios
           .delete(`https://konseruntuk.online/api/data1/${data.id}`)
-          .then((res) => { })
           .catch((err) => console.log(err))
       });
       alert("berhasil delete data")
@@ -79,7 +78,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     if (deleteKataAll) {
       axios
         .delete(`https://konseruntuk.online/api/data1/${id}`)
-        .then((res) => {
+        .then(() => {
           alert("berhasil delete data")
           router.push("/curcollistall");
         })

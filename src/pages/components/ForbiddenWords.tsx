@@ -42,6 +42,12 @@ const prohibitedWords = [
   "Brengsek",
   "Tai",
   "Kontol",
-  "Memek"
+  "Memek",
+  "Tobrut",
+  "Toket",
+  "Pler",
+  "Peler",
+  "Meki",
+  "Grepe"
 ];
 export default prohibitedWords;

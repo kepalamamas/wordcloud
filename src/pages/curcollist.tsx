@@ -44,7 +44,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         <div className="scroll" id='scroll'>
           {data.map((x, idx) => (
             <div>
-              <p id={`kata${idx}`}>{x.kata}</p>
+              <p className='kata' id={`kata${idx}`}>{x.kata}</p>
             </div>
           ))}
         </div>
