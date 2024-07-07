@@ -55,6 +55,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       "Gembel",
       "Brengsek",
       "Tai",
+      "Kontol"
     ];
 
     return prohibitedWords.some((word) => {
@@ -124,7 +125,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 value={kata}
                 placeholder="Silahkan curcol..."
                 onChange={(e) => setKata(e.target.value)}
-                maxLength={40}
+                maxLength={50}
               />
               {error ? <p>{error}</p> : null}
               {berhasil ? <p>Terima kasih!</p> : null}
