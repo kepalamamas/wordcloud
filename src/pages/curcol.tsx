@@ -1,10 +1,11 @@
 import axios from "axios";
 import Image from "next/image";
 import * as React from "react";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import logoCurcol from "../../public/assets/curcol/logoCurcol.png";
+import prohibitedWords from "./components/ForbiddenWords";
 
-interface IFormParagonProps {}
+interface IFormParagonProps { }
 
 const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const [kata, setKata] = useState("");
@@ -12,51 +13,6 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const [error, setError] = useState("");
 
   const containsProhibitedWords = (input: string) => {
-    const prohibitedWords = [
-      "Anjing",
-      "Babi",
-      "Monyet",
-      "Kunyuk",
-      "Bajingan",
-      "Asu",
-      "Bangsat",
-      "Kampret",
-      "Perek",
-      "Pecun",
-      "Bencong",
-      "Banci",
-      "Jablay",
-      "Maho",
-      "Bego",
-      "Bodoh",
-      "Idiot",
-      "Geblek",
-      "Goblok",
-      "Sinting",
-      "Orang Gila",
-      "Gila",
-      "Sinting",
-      "Tolol",
-      "Sarap",
-      "Udik",
-      "Kampungan",
-      "Budek",
-      "Bolot",
-      "Jelek",
-      "Setan",
-      "Iblis",
-      "Jahannam",
-      "Dajjal",
-      "Jin Tomang",
-      "Keparat",
-      "Ngewe",
-      "Ngentot",
-      "Bejad",
-      "Gembel",
-      "Brengsek",
-      "Tai",
-      "Kontol"
-    ];
 
     return prohibitedWords.some((word) => {
       const regex = new RegExp(
@@ -104,7 +60,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     if (error) {
       const timer = setTimeout(() => {
         setError("");
-      }, 5000); 
+      }, 5000);
 
       return () => clearTimeout(timer);
     }

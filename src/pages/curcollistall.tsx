@@ -58,21 +58,55 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     }
   }, []);
 
+  const handleDeleteAll = () => {
+    const deleteKataAll = window.confirm("Are you sure want to delete all?")
+
+    if (deleteKataAll) {
+      data1.forEach((data) => {
+        axios
+          .delete(`https://konseruntuk.online/api/data1/${data.id}`)
+          .then((res) => { })
+          .catch((err) => console.log(err))
+      });
+      alert("berhasil delete data")
+      router.push("/curcollistall")
+    }
+  }
+
+  const handleDelete = (id: any) => {
+    const deleteKataAll = window.confirm("Are you sure want to delete?")
+
+    if (deleteKataAll) {
+      axios
+        .delete(`https://konseruntuk.online/api/data1/${id}`)
+        .then((res) => {
+          alert("berhasil delete data")
+          router.push("/curcollistall");
+        })
+        .catch((err) => console.log(err))
+    };
+  }
+
   return (
     <>
       <div className='container'>
         <h1>All List</h1>
+        <button onClick={() => handleDeleteAll()}>Delete All</button>
         <div className='row'>
           <div className="list-holder">
             <h2>Data 1</h2>
             {data1.map((data) => {
               return (
-                <div className='data-item' key={String(data.id)} onClick={() => {
-                  router.push({
-                    pathname: "/curcoldetail",
-                    query: { id: String(data.id) }
-                  })
-                }}>{data.kata}</div>
+                <div className='data-item' key={String(data.id)}>
+                  {data.kata}
+                  <button style={{ float: "right" }} onClick={() => handleDelete(data.id)}>Delete</button>
+                  <button style={{ float: "right" }} onClick={() => {
+                    router.push({
+                      pathname: "/curcoldetail",
+                      query: { id: String(data.id) }
+                    })
+                  }}>Detail</button>
+                </div>
               )
             })}
           </div>
