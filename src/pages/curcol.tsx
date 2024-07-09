@@ -10,6 +10,7 @@ interface IFormParagonProps { }
 const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const [kata, setKata] = useState("");
   const [berhasil, setBerhasil] = useState(false);
+  const [holdButton, setHoldbutton] = useState(true);
   const [error, setError] = useState("");
 
   const containsProhibitedWords = (input: string) => {
@@ -34,6 +35,8 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       return;
     }
 
+    setHoldbutton(false);
+        
     try {
       const postData = {
         kata,
@@ -48,11 +51,16 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       );
 
       if (postResponse.status === 201) {
-        setBerhasil(true);
+        setBerhasil(true);        
         setKata("");
       }
     } catch (error) {
       console.error(error);
+    } finally {
+      setTimeout(() => {
+        setHoldbutton(true);
+      }, 1500);
+
     }
   };
 
@@ -85,7 +93,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
               />
               {error ? <p>{error}</p> : null}
               {berhasil ? <p>Terima kasih!</p> : null}
-              <button className="submit-button">Submit</button>
+              { holdButton ? <button className="submit-button">Submit</button> : <button className="submit-button button-disabled" disabled>Processing..</button>}
             </div>
           </form>
         </div>

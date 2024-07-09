@@ -115,17 +115,22 @@
   background-color: #df2f6d;
   color: #ffffff;
   cursor: pointer;
-  border: 2px solid #df2f6d; /* Border color matching the background */
-  border-radius: 10px; /* Rounded corners */
-  padding: 10px 20px; /* Add padding for better spacing */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Softer shadow */
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  border: 2px solid #df2f6d; 
+  border-radius: 10px; 
+  padding: 10px 20px; 
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; 
+}
+
+.button-disabled {
+  background-color: #9046AB;
+  border: 2px solid #9046AB; 
 }
 
 .submit-button:hover {
-  background-color: #c0255b; /* Slightly darker background on hover */
-  border-color: #c0255b; /* Match border color to the new background color */
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+  background-color: #c0255b; 
+  border-color: #c0255b; 
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
 }
 
 .submit-button:active {
