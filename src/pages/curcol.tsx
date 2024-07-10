@@ -66,6 +66,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       } finally {
         setTimeout(() => {
           setHoldbutton(true);
+          setBerhasil(false);        
         }, 1500);
   
       }
