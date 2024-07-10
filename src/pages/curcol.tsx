@@ -85,7 +85,6 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
         <div className="containerInputFormParagon">
           <Image className="imageNovo" src={logoCurcol} alt="logoNovo"></Image>
           <form className="formParagon" onSubmit={handleSubmit}>
-            {/* <h1>Whats is the best version of you?</h1> */}
 
             <div className="inputWrapper">
               <input
@@ -94,11 +93,11 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 value={kata}
                 placeholder="Silahkan curcol..."
                 onChange={(e) => setKata(e.target.value)}
-                maxLength={50}
+                maxLength={40}
               />
               {error ? <p>{error}</p> : null}
               {berhasil ? <p>Terima kasih!</p> : null}
-              { holdButton ? <button className="submit-button">Submit</button> : <button className="submit-button button-disabled" disabled>Processing..</button>}
+              { holdButton ? <button className="submit-button">Kirim</button> : <button className="submit-button button-disabled" disabled>Memproses..</button>}
             </div>
           </form>
         </div>
