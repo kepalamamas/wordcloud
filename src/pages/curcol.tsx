@@ -12,7 +12,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const [berhasil, setBerhasil] = useState(false);
   const [holdButton, setHoldbutton] = useState(true);
   const [error, setError] = useState("");
-  const [randomHit, setRandomHit] = useState("");  
+  const [randomHit, setRandomHit] = useState("data1");  
 
   const containsProhibitedWords = (input: string) => {
 
@@ -42,8 +42,6 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     }
 
     setHoldbutton(false);
-        
-    if(randomHit){
 
       try {
         const postData = {
@@ -64,13 +62,14 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
         }
       } catch (error) {
         console.error(error);
+        setError("Gagal kirim, coba lagi yaa...")
       } finally {
         setTimeout(() => {
           setHoldbutton(true);
         }, 1500);
   
       }
-    }
+    // }
   };
 
   useEffect(() => {
@@ -101,7 +100,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
               />
               {error ? <p>{error}</p> : null}
               {berhasil ? <p>Terima kasih!</p> : null}
-              { holdButton ? <button className="submit-button">Kirim</button> : <button className="submit-button button-disabled" disabled>Memproses..</button>}
+              { holdButton ? <button className="submit-button">Kirim</button> : <button className="submit-button button-disabled" disabled>Memproses...</button>}
             </div>
           </form>
         </div>
