@@ -1391,15 +1391,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .scroll {
-  height: 75vh;
-  margin-top: 25vh;
+  height: 70vh;
+  margin-top: 30vh;
   font-size: 2.2rem;
-  margin-left: -10vw;
-  width: 120vw;
+  text-align: center;
 }
 
 .scroll div {
-  display: flex;
+  /* display: flex; */
   gap: 0.8em;
   /* justify-content: center; */
 }
@@ -1410,7 +1409,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   /* font-weight: bold; */
   /* margin-top: 0.8vh; */
   /* margin-bottom: 0.8vh; */
-  line-height: 1px;
+  /* line-height: 1px; */
   /* text-shadow: 0 0 2px #6a80bc, 0 0 2px #6a80bc; */
   font-family: 'Ortland';
 }

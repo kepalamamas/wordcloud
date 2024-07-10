@@ -78,10 +78,6 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     if (deleteKataAll) {
       axios
         .delete(`https://konseruntuk.online/api/data1/${id}`)
-        .then(() => {
-          alert("berhasil delete data")
-          router.push("/curcollistall");
-        })
         .catch((err) => console.log(err))
     };
   }
