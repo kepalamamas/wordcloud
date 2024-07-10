@@ -12,6 +12,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const [berhasil, setBerhasil] = useState(false);
   const [holdButton, setHoldbutton] = useState(true);
   const [error, setError] = useState("");
+  const [randomHit, setRandomHit] = useState("");  
 
   const containsProhibitedWords = (input: string) => {
 
@@ -30,6 +31,10 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const random = Math.random();
+    const hitValue = random <= 0.5 ? "data1" : "data2";
+    setRandomHit(hitValue);
+
     if (containsProhibitedWords(kata)) {
       setError("Gaboleh kata kasar yah...");
       return;
@@ -43,7 +48,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       };
 
       const postResponse = await axios.post(
-        "https://konseruntuk.online/api/data1",
+        `https://konseruntuk.online/api/${randomHit}`,
         postData,
         {
           headers: { "Content-Type": "application/json" },

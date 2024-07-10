@@ -133,10 +133,22 @@
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
 }
 
+.button-disabled:hover {
+  background-color: #733889;
+  border-color: #733889;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .submit-button:active {
-  background-color: #a01f4a; /* Even darker background on click */
-  border-color: #a01f4a; /* Match border color to the new background color */
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Smaller shadow on click */
+  background-color: #a01f4a;
+  border-color: #a01f4a;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-disabled:active {
+  background-color: #733889;
+  border-color: #733889;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 input {
