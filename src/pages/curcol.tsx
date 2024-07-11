@@ -42,7 +42,6 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     }
 
     setHoldbutton(false);
-
       try {
         const postData = {
           kata,

@@ -21,22 +21,28 @@ const add = (value: any, idx: Number, isFirst: Boolean) => {
   } else {
     parent?.insertBefore(newItem, listItems[0]);
   }
+  if (listItems.length > 15) {
+    parent?.removeChild(listItems[listItems.length - 1]);
+  }
 }
 
 const add2 = (value: any, idx: Number, isFirst: Boolean) => {
   var parent = document.getElementById('scroll-container2');
   var newItem = document.createElement('div');
-  newItem.className = 'container-kata';
+  newItem.className = 'container-kata2';
   newItem.id = `container2-${idx}`;
   var p = document.createElement('p');
-  p.className = 'kata newItem';
+  p.className = 'kata2 newItem';
   p.innerHTML = value;
   newItem.appendChild(p);
-  var listItems = document.getElementsByClassName("container-kata");
+  var listItems = document.getElementsByClassName("container-kata2");
   if (isFirst) {
     parent?.appendChild(newItem);
   } else {
     parent?.insertBefore(newItem, listItems[0]);
+  }
+  if (listItems.length > 15) {
+    parent?.removeChild(listItems[listItems.length - 1]);
   }
 }
 
@@ -107,7 +113,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
                   id: d.id,
                   kata: d.kata
                 });
-                add2(d.kata, d.id, true);
+                add2(d.kata, d.id, false);
               }
             });
             setData2(newData);
