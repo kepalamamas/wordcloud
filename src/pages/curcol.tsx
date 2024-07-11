@@ -97,7 +97,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 value={kata}
                 placeholder="Silahkan curcol..."
                 onChange={(e) => setKata(e.target.value)}
-                maxLength={40}
+                maxLength={35}
               />
               {error ? <p>{error}</p> : null}
               {berhasil ? <p>Terima kasih!</p> : null}

@@ -2,9 +2,42 @@ import axios from 'axios';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Paragon } from '../type';
-import move from './components/mover/RandomObjectMover';
 
 interface IParagonListProps {
+}
+
+const add = (value: any, idx: Number, isFirst: Boolean) => {
+  var parent = document.getElementById('scroll-container');
+  var newItem = document.createElement('div');
+  newItem.className = 'container-kata';
+  newItem.id = `container-${idx}`;
+  var p = document.createElement('p');
+  p.className = 'kata newItem';
+  p.innerHTML = value;
+  newItem.appendChild(p);
+  var listItems = document.getElementsByClassName("container-kata");
+  if (isFirst) {
+    parent?.appendChild(newItem);
+  } else {
+    parent?.insertBefore(newItem, listItems[0]);
+  }
+}
+
+const add2 = (value: any, idx: Number, isFirst: Boolean) => {
+  var parent = document.getElementById('scroll-container2');
+  var newItem = document.createElement('div');
+  newItem.className = 'container-kata';
+  newItem.id = `container2-${idx}`;
+  var p = document.createElement('p');
+  p.className = 'kata newItem';
+  p.innerHTML = value;
+  newItem.appendChild(p);
+  var listItems = document.getElementsByClassName("container-kata");
+  if (isFirst) {
+    parent?.appendChild(newItem);
+  } else {
+    parent?.insertBefore(newItem, listItems[0]);
+  }
 }
 
 const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
@@ -16,52 +49,82 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     if (!isLoaded) {
       axios
         .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=12`)
-        .then((res) => setData(res.data))
+        .then((res) => {
+          var newData = data;
+          res.data.forEach((d: any) => {
+            if (!newData.some(e => e.id === d.id)) {
+              newData.push({
+                id: d.id,
+                kata: d.kata
+              });
+              add(d.kata, d.id, true);
+            }
+          });
+          setData(newData);
+        })
         .catch((err) => console.log(err));
       axios
         .get(`https://konseruntuk.online/api/data2?_sort=id&_order=desc&_limit=12`)
-        .then((res) => setData2(res.data))
+        .then((res) => {
+          var newData = data2;
+          res.data.forEach((d: any) => {
+            if (!newData.some(e => e.id === d.id)) {
+              newData.push({
+                id: d.id,
+                kata: d.kata
+              });
+              add2(d.kata, d.id, true);
+            }
+          });
+          setData2(newData);
+        })
         .catch((err) => console.log(err));
       setIsLoaded(true);
       setInterval(() => {
         axios
           .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=12`)
-          .then((res) => setData(res.data))
+          .then((res) => {
+            var newData = data;
+            res.data.forEach((d: any) => {
+              if (!newData.some(e => e.id === d.id)) {
+                newData.push({
+                  id: d.id,
+                  kata: d.kata
+                });
+                add(d.kata, d.id, false);
+              }
+            });
+            setData(newData);
+          })
           .catch((err) => console.log(err));
         axios
           .get(`https://konseruntuk.online/api/data2?_sort=id&_order=desc&_limit=12`)
-          .then((res) => setData2(res.data))
+          .then((res) => {
+            var newData = data2;
+            res.data.forEach((d: any) => {
+              if (!newData.some(e => e.id === d.id)) {
+                newData.push({
+                  id: d.id,
+                  kata: d.kata
+                });
+                add2(d.kata, d.id, true);
+              }
+            });
+            setData2(newData);
+          })
           .catch((err) => console.log(err));
       }, 5000);
     }
   }, []);
 
-  useEffect(() => {
-    data.forEach(function (value, i) {
-      // move(`kata${i}`);
-    })
-  }, [data]);
-
   return (
     <>
       <script type="text/javascript" src="src/pages/components/mover/RandomObjectMover.js"></script>
       <div className='scroll-list'>
-        <div className='scroll-container'>
-          <div className="scroll" id='scroll'>
-            {data.map((x, idx) => (
-              <div className='container-kata'>
-                <p className='kata' id={`kata${idx}`}>{x.kata}</p>
-              </div>
-            ))}
-          </div>
+        <div className='scroll-container' id="scroll-container">
         </div>
-        <div className='scroll-container'>
-          <div className="scroll" id='scroll'>
-            {data2.map((x, idx) => (
-              <div className='container-kata'>
-                <p className='kata' id={`kata2${idx}`}>{x.kata}</p>
-              </div>
-            ))}
+        <div className='scroll-container' id="scroll-container2">
+          <div className="scroll2">
           </div>
         </div>
       </div>
