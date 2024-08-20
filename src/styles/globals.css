@@ -1381,22 +1381,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .scroll-list {
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
   background: url("../../public/assets/curcol/curcol.jpg") no-repeat center center;
   background-size: cover;
-  overflow: hidden;  
-}
-
-.scroll-container {
-  width: 50%;
-  display: flex;
-  flex-direction: column-reverse;
-  max-height: 57vh;
-  margin-top: 27vh;
-  font-size: 2.2rem;
-  text-align: center;
-  position: relative;
   overflow: hidden;  
 }
 
@@ -1404,31 +1390,28 @@ Note: Beware of modifying this element as it can break the animations - you shou
   -webkit-text-stroke: 2px black;
 }
 
-.kata2 {
-  -webkit-text-stroke: 2px black;
+.scroll {
+  height: 75vh;
+  margin-top: 25vh;
+  font-size: 2.2rem;
+  margin-left: -10vw;
+  width: 120vw;
 }
 
-.scroll-container div {
+.scroll div {
+  display: flex;
   gap: 0.8em;
+  /* justify-content: center; */
 }
 
-.scroll2 div {
-  gap: 0.8em;
-}
-
-.scroll-container p {
-  font-size: 0.8em;
+.scroll p {
+  font-size: 1em;
   color: white;
-  margin: 0;
-  padding: 0;
-  font-family: 'Ortland';
-}
-
-.scroll2 p {
-  font-size: 0.8em;
-  color: white;
-  margin: 0;
-  padding: 0;
+  /* font-weight: bold; */
+  /* margin-top: 0.8vh; */
+  /* margin-bottom: 0.8vh; */
+  line-height: 1px;
+  /* text-shadow: 0 0 2px #6a80bc, 0 0 2px #6a80bc; */
   font-family: 'Ortland';
 }
 
@@ -1497,25 +1480,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
   to {
     transform: translateX(80%);
-  }
-}
-
-.newItem {
-  max-height: 0;
-  opacity: 0;
-  animation: grow 1s ease-in-out forwards;
-  -webkit-animation: grow 1s ease-in-out forwards;
-}
-
-@-webkit-keyframes grow {
-  to {
-    max-height: 30vmax;
-    opacity: 1;
-  }
-}
-@keyframes grow {
-  to {
-    max-height: 30vmax;
-    opacity: 1;
   }
 }
