@@ -12,6 +12,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const [berhasil, setBerhasil] = useState(false);
   const [holdButton, setHoldbutton] = useState(true);
   const [error, setError] = useState("");
+  const [randomHit, setRandomHit] = useState("data1");  
 
   const containsProhibitedWords = (input: string) => {
 
@@ -30,38 +31,45 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const random = Math.random();
+    const hitValue = random <= 0.5 ? "data1" : "data2";
+    console.log(hitValue);
+    setRandomHit(hitValue);
+
     if (containsProhibitedWords(kata)) {
       setError("Gaboleh kata kasar yah...");
       return;
     }
 
     setHoldbutton(false);
-        
-    try {
-      const postData = {
-        kata,
-      };
-
-      const postResponse = await axios.post(
-        "https://konseruntuk.online/api/data1",
-        postData,
-        {
-          headers: { "Content-Type": "application/json" },
+      try {
+        const postData = {
+          kata,
+        };
+  
+        const postResponse = await axios.post(
+          `https://konseruntuk.online/api/${randomHit}`,
+          postData,
+          {
+            headers: { "Content-Type": "application/json" },
+          }
+        );
+  
+        if (postResponse.status === 201) {
+          setBerhasil(true);        
+          setKata("");
         }
-      );
-
-      if (postResponse.status === 201) {
-        setBerhasil(true);        
-        setKata("");
+      } catch (error) {
+        console.error(error);
+        setError("Gagal kirim, coba lagi yaa...")
+      } finally {
+        setTimeout(() => {
+          setHoldbutton(true);
+          setBerhasil(false);        
+        }, 1500);
+  
       }
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setTimeout(() => {
-        setHoldbutton(true);
-      }, 1500);
-
-    }
+    // }
   };
 
   useEffect(() => {
@@ -80,7 +88,6 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
         <div className="containerInputFormParagon">
           <Image className="imageNovo" src={logoCurcol} alt="logoNovo"></Image>
           <form className="formParagon" onSubmit={handleSubmit}>
-            {/* <h1>Whats is the best version of you?</h1> */}
 
             <div className="inputWrapper">
               <input
@@ -89,11 +96,11 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
                 value={kata}
                 placeholder="Silahkan curcol..."
                 onChange={(e) => setKata(e.target.value)}
-                maxLength={50}
+                maxLength={35}
               />
               {error ? <p>{error}</p> : null}
               {berhasil ? <p>Terima kasih!</p> : null}
-              { holdButton ? <button className="submit-button">Submit</button> : <button className="submit-button button-disabled" disabled>Processing..</button>}
+              { holdButton ? <button className="submit-button">Kirim</button> : <button className="submit-button button-disabled" disabled>Memproses...</button>}
             </div>
           </form>
         </div>

@@ -33,7 +33,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
 
   useEffect(() => {
     data.forEach(function (value, i) {
-      // move(`kata${i}`);
+      move(`kata${i}`);
     })
   }, [data]);
 
