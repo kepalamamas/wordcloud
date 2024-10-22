@@ -43,7 +43,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       };
 
       const postResponse = await axios.post(
-        "https://konseruntuk.online/api/data1",
+        "https://konseruntuk.online/api/data2",
         postData,
         {
           headers: { "Content-Type": "application/json" },

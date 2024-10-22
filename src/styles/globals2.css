@@ -15,7 +15,7 @@
 
 .containerFormParagon {
   display: flex;
-  font-family: "Ortland";
+  font-family: "UniversalSerif";
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -35,7 +35,7 @@
 
 .containerFormParagon2 {
   display: flex;
-  font-family: "Ortland";
+  font-family: "UniversalSerif";
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -78,7 +78,7 @@
 }
 
 .formParagon h1 {
-  font-family: "FigTree";
+  font-family: "UniversalSeriv";
   color: #ffffff;
   font-size: 2rem;
   font-weight: 400;
@@ -97,7 +97,7 @@
 }
 
 .inputWrapper input {
-  font-family: "FigTree";
+  font-family: "UniversalSerif";
   width: 37rem;
   height: 3rem;
   background-color: transparent;
