@@ -20,17 +20,37 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
   animation-duration: 1.8s;
   animation-delay: 0.5s;
   animation-name: fadeInUp;
   animation-fill-mode: both;
-  padding-bottom: 10rem;
-  background: url("../../public/assets/curcol/bgForm.png");
-  background-size: cover; /* Adjusts the background image size to cover the container */
-  background-position: center; /* Centers the background image */
+  padding-bottom: 14rem;
+  background: url("../../public/assets/GG/wordcloud1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
   background-repeat: no-repeat;
-  /* Additional background properties */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
+.containerFormParagon2 {
+  display: flex;
+  font-family: "Ortland";
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  animation-duration: 1.8s;
+  animation-delay: 0.5s;
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+  padding-bottom: 14rem;
+  background: url("../../public/assets/GG/wordcloud2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
 
 .containerInputFormParagon {
@@ -112,10 +132,10 @@
 
 .submit-button {
   font-size: 1.2rem;
-  background-color: #df2f6d;
+  background-color: #960E0F;
   color: #ffffff;
   cursor: pointer;
-  border: 2px solid #df2f6d; 
+  border: 2px solid #960E0F; 
   border-radius: 10px; 
   padding: 10px 20px; 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -128,8 +148,8 @@
 }
 
 .submit-button:hover {
-  background-color: #c0255b; 
-  border-color: #c0255b; 
+  background-color: #D9B858; 
+  border-color: #D9B858; 
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
 }
 
@@ -199,7 +219,13 @@ input::placeholder {
   }
 
   .containerFormParagon {
-    background: url("../../public/assets/curcol/bgHpForm.png") no-repeat center
+    background: url("../../public/assets/GG/wordcloud1.png") no-repeat center
+      center;
+    background-size: cover;
+  }
+
+  .containerFormParagon2 {
+    background: url("../../public/assets/GG/wordcloud2.png") no-repeat center
       center;
     background-size: cover;
   }

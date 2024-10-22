@@ -78,7 +78,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
     <>
       <div className="containerFormParagon">
         <div className="containerInputFormParagon">
-          <Image className="imageNovo" src={logoCurcol} alt="logoNovo"></Image>
+          {/* <Image className="imageNovo" src={logoCurcol} alt="logoNovo"></Image> */}
           <form className="formParagon" onSubmit={handleSubmit}>
             {/* <h1>Whats is the best version of you?</h1> */}
 

@@ -1381,7 +1381,15 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .scroll-list {
   width: 100%;
   height: 100vh;
-  background: url("../../public/assets/curcol/curcol.jpg") no-repeat center center;
+  background: url("../../public/assets/GG/wordcloudPolos1.png") no-repeat center center;
+  background-size: cover;
+  overflow: hidden;  
+}
+
+.scroll-list2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../../public/assets/GG/wordcloudPolos2.png") no-repeat center center;
   background-size: cover;
   overflow: hidden;  
 }
