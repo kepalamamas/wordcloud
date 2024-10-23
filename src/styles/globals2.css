@@ -220,7 +220,8 @@ input::placeholder {
     background: url("../../public/assets/GG/wordcloud1.jpg") no-repeat center
       center;
     background-size: cover;
-    background-position: center;    
+    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
   }
 
@@ -228,7 +229,8 @@ input::placeholder {
     background: url("../../public/assets/GG/wordcloud2.jpg") no-repeat center
       center;
     background-size: cover;
-    background-position: center;    
+    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
   }
 }
