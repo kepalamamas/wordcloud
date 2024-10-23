@@ -30,7 +30,6 @@
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;  
-  background-repeat: no-repeat;
 }
 
 .containerFormParagon2 {
@@ -50,7 +49,6 @@
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;  
-  background-repeat: no-repeat;
 }
 
 .containerInputFormParagon {
@@ -132,25 +130,25 @@
 
 .submit-button {
   font-size: 1.2rem;
-  background-color: #960E0F;
+  background-color: #960e0f;
   color: #ffffff;
   cursor: pointer;
-  border: 2px solid #960E0F; 
-  border-radius: 10px; 
-  padding: 10px 20px; 
+  border: 2px solid #960e0f;
+  border-radius: 10px;
+  padding: 10px 20px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease; 
+  transition: all 0.3s ease;
 }
 
 .button-disabled {
-  background-color: #9046AB;
-  border: 2px solid #9046AB; 
+  background-color: #9046ab;
+  border: 2px solid #9046ab;
 }
 
 .submit-button:hover {
-  background-color: #D9B858; 
-  border-color: #D9B858; 
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); 
+  background-color: #d9b858;
+  border-color: #d9b858;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .submit-button:active {
@@ -222,11 +220,15 @@ input::placeholder {
     background: url("../../public/assets/GG/wordcloud1.jpg") no-repeat center
       center;
     background-size: cover;
+    background-position: top center;    
+    background-repeat: no-repeat;
   }
 
   .containerFormParagon2 {
     background: url("../../public/assets/GG/wordcloud2.jpg") no-repeat center
       center;
     background-size: cover;
+    background-position: top center;    
+    background-repeat: no-repeat;
   }
 }
