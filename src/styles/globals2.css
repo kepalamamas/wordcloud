@@ -217,33 +217,19 @@ input::placeholder {
     width: 100%;
   }
 
-  /* .containerFormParagon {
+  .containerFormParagon {
     background: url("../../public/assets/GG/wordcloud1.jpg") no-repeat center
       center;
     background-size: cover;
     background-position: center;    
     background-repeat: no-repeat;
-  } */
+  }  
 
-  .containerFormParagon {
-    background: url("../../public/assets/GG/wordcloud1.jpg") no-repeat top
-      center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-left: 1px;
-  }
-
-  /* .containerFormParagon2 {
+  .containerFormParagon2 {
     background: url("../../public/assets/GG/wordcloud2.jpg") no-repeat center
       center;
     background-size: cover;
     background-position: center;    
     background-repeat: no-repeat;
-  } */
-  .containerFormParagon2 {
-    background: url("../../public/assets/GG/wordcloud2.jpg") no-repeat top
-      center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  }  
 }
