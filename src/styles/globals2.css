@@ -230,6 +230,7 @@ input::placeholder {
       center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-left: 1px;
   }
 
   /* .containerFormParagon2 {
