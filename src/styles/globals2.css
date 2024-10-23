@@ -25,11 +25,12 @@
   animation-delay: 0.5s;
   animation-name: fadeInUp;
   animation-fill-mode: both;
-  padding-bottom: 14rem;
+  padding-bottom: 10rem;
   background: url("../../public/assets/GG/wordcloud1.jpg");
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .containerFormParagon2 {
@@ -48,7 +49,8 @@
   background: url("../../public/assets/GG/wordcloud2.jpg");
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .containerInputFormParagon {
@@ -57,7 +59,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 0rem 0rem 0rem;
   width: 100%;
 }
 
