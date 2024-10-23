@@ -40,7 +40,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   return (
     <>
       <script type="text/javascript" src="src/pages/components/mover/RandomObjectMover.js"></script>
-      <div className='scroll-list'>
+      <div className='scroll-list-led'>
         <div className="scroll" id='scroll'>
           {data.map((x, idx) => (
             <div>
