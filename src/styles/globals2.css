@@ -28,7 +28,7 @@
   padding-bottom: 14rem;
   background: url("../../public/assets/GG/wordcloud1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;  
   background-repeat: no-repeat;
 }
@@ -48,7 +48,7 @@
   padding-bottom: 14rem;
   background: url("../../public/assets/GG/wordcloud2.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;  
   background-repeat: no-repeat;
 }

@@ -1398,24 +1398,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 } */
 
 .scroll-list-led {
-  width: 100vw; /* Set the width to 100% of the viewport width */
+  width: 100%; /* Set the width to 100% of the viewport width */
   height: 100vh; /* Set the height to 100% of the viewport height */
-  background: url("../../public/assets/GG/ledbg.png") no-repeat center center; /* Center the background */
-  /* background-size: 100% 100%; */
-  background-size: contain;
-  overflow: hidden; 
+  background: url("../../public/assets/GG/ledbg.png"); /* Center the background */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;  
 }
 
 .scroll-list {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background: url("../../public/assets/GG/wordcloudPolos1.png") no-repeat center
-    center;
-  background-size: cover;
-  /* background-size: 100% 100%; */
-  /* background-position: center; */
-  /* background-attachment: fixed; */
-  overflow: hidden;
+  background: url("../../public/assets/GG/wordcloudPolos1.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;  
 }
 
 .scroll-list2 {
@@ -1432,8 +1429,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
 
 .scroll {
-  height: 75vh;
-  margin-top: 25vh;
+  height: 75vh;  
   font-size: 2.2rem;
   margin-left: -10vw;
   width: 120vw;
