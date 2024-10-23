@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   animation-duration: 1.8s;
   animation-delay: 0.5s;
@@ -39,7 +39,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   animation-duration: 1.8s;
   animation-delay: 0.5s;
