@@ -222,7 +222,7 @@ input::placeholder {
       center;
     background-size: cover;
     background-position: center;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-repeat: no-repeat;
   }
 
@@ -231,7 +231,7 @@ input::placeholder {
       center;
     background-size: cover;
     background-position: center;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-repeat: no-repeat;
   }
 }
