@@ -219,7 +219,7 @@ input::placeholder {
 
   .containerFormParagon {
     background: url("../../public/assets/GG/wordcloud1.jpg");
-    background-size: contain;
+    background-size: 100% 100vh;
     background-position: top center;    
     background-repeat: no-repeat;
     overflow: hidden;
@@ -227,7 +227,7 @@ input::placeholder {
 
   .containerFormParagon2 {
     background: url("../../public/assets/GG/wordcloud2.jpg");
-    background-size: contain;
+    background-size: 100% 100vh;
     background-position: top center;    
     background-repeat: no-repeat;
     overflow: hidden;
