@@ -54,7 +54,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=12`)
+        .get(`https://suryanation.online/api/data1?_sort=id&_order=desc&_limit=12`)
         .then((res) => {
           var newData = data;
           res.data.forEach((d: any) => {
@@ -70,7 +70,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         })
         .catch((err) => console.log(err));
       axios
-        .get(`https://konseruntuk.online/api/data2?_sort=id&_order=desc&_limit=12`)
+        .get(`https://suryanation.online/api/data2?_sort=id&_order=desc&_limit=12`)
         .then((res) => {
           var newData = data2;
           res.data.forEach((d: any) => {
@@ -88,7 +88,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
       setIsLoaded(true);
       setInterval(() => {
         axios
-          .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc&_limit=12`)
+          .get(`https://suryanation.online/api/data1?_sort=id&_order=desc&_limit=12`)
           .then((res) => {
             var newData = data;
             res.data.forEach((d: any) => {
@@ -104,7 +104,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
           })
           .catch((err) => console.log(err));
         axios
-          .get(`https://konseruntuk.online/api/data2?_sort=id&_order=desc&_limit=12`)
+          .get(`https://suryanation.online/api/data2?_sort=id&_order=desc&_limit=12`)
           .then((res) => {
             var newData = data2;
             res.data.forEach((d: any) => {

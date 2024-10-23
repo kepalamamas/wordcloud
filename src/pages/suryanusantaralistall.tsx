@@ -17,21 +17,21 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc`)
+        .get(`https://suryanation.online/api/data1?_sort=id&_order=desc`)
         .then((res) => setData1(res.data))
         .catch((err) => console.log(err));
       axios
-        .get(`https://konseruntuk.online/api/data2?_sort=id&_order=desc`)
+        .get(`https://suryanation.online/api/data2?_sort=id&_order=desc`)
         .then((res) => setData2(res.data))
         .catch((err) => console.log(err));
       setIsLoaded(true);
       setInterval(() => {
         axios
-          .get(`https://konseruntuk.online/api/data1?_sort=id&_order=desc`)
+          .get(`https://suryanation.online/api/data1?_sort=id&_order=desc`)
           .then((res) => setData1(res.data))
           .catch((err) => console.log(err));
         axios
-          .get(`https://konseruntuk.online/api/data2?_sort=id&_order=desc`)
+          .get(`https://suryanation.online/api/data2?_sort=id&_order=desc`)
           .then((res) => setData2(res.data))
           .catch((err) => console.log(err));
       }, 10000);
@@ -44,7 +44,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     if (deleteKataAll) {
       data1.forEach((data) => {
         axios
-          .delete(`https://konseruntuk.online/api/data1/${data.id}`)
+          .delete(`https://suryanation.online/api/data1/${data.id}`)
           .catch((err) => console.log(err))
       });
       alert("berhasil delete data");
@@ -57,7 +57,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
     if (deleteKataAll) {
       data2.forEach((data) => {
         axios
-          .delete(`https://konseruntuk.online/api/data2/${data.id}`)
+          .delete(`https://suryanation.online/api/data2/${data.id}`)
           .catch((err) => console.log(err))
       });
       alert("berhasil delete data");
@@ -69,7 +69,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
 
     if (deleteKata) {
       axios
-        .delete(`https://konseruntuk.online/api/data1/${id}`)
+        .delete(`https://suryanation.online/api/data1/${id}`)
         .catch((err) => console.log(err))
     };
   }
@@ -79,7 +79,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
 
     if (deleteKata) {
       axios
-        .delete(`https://konseruntuk.online/api/data2/${id}`)
+        .delete(`https://suryanation.online/api/data2/${id}`)
         .catch((err) => console.log(err))
     };
   }

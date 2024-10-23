@@ -1401,8 +1401,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   width: 100vw; /* Set the width to 100% of the viewport width */
   height: 100vh; /* Set the height to 100% of the viewport height */
   background: url("../../public/assets/GG/ledbg.png") no-repeat center center; /* Center the background */
-  background-size: cover; /* Cover the entire area, cropping if necessary */
-  overflow: hidden;
+  /* background-size: 100% 100%; */
+  background-size: contain;
+  overflow: hidden; 
 }
 
 .scroll-list {
@@ -1411,6 +1412,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: url("../../public/assets/GG/wordcloudPolos1.png") no-repeat center
     center;
   background-size: cover;
+  /* background-size: 100% 100%; */
   /* background-position: center; */
   /* background-attachment: fixed; */
   overflow: hidden;
