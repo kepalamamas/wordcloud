@@ -29,7 +29,8 @@
   background: url("../../public/assets/GG/wordcloud1.jpg");
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .containerFormParagon2 {
@@ -48,7 +49,8 @@
   background: url("../../public/assets/GG/wordcloud2.jpg");
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .containerInputFormParagon {
@@ -56,7 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   width: 100%;
 }
 
