@@ -1461,6 +1461,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 .kata {
   -webkit-text-stroke: 2px black;
+  padding: 2rem;
 }
 
 .scroll {
