@@ -30,7 +30,13 @@ RandomObjectMover.prototype._generateNewPosition = function () {
   var y = Math.floor(Math.random() * availableHeight) + 24 * 16;
   var x = Math.floor(Math.random() * availableWidth);
 
-  return { x: x, y: y };
+  // Create a random spread factor to modify x and y distribution
+  var spreadFactor = Math.random() * 0.5 + 0.5; // Generates a factor between 0.5 and 1.0
+  
+  return { 
+    x: x * spreadFactor, // Scale x by the spread factor for more even distribution
+    y: y * spreadFactor  // Scale y by the spread factor for more even distribution
+  };
 }
 
 RandomObjectMover.prototype._calcDelta = function (a, b) {
