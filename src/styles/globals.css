@@ -1429,7 +1429,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(270deg);
   transform-origin: center;
 }
 
@@ -1455,7 +1455,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
+  transform: translate(-50%, -50%) rotate(270deg);
   transform-origin: center;
 }
 
