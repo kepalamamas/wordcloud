@@ -1407,7 +1407,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
   overflow: hidden;
 }
 
-.scroll-list {
+/* .scroll-list {
   width: 100vw;
   height: 100vh;
   background: url("../../public/assets/GG/wordcloudPolos1.png");
@@ -1416,9 +1416,24 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-repeat: no-repeat;
   overflow: hidden;
   rotate: 90deg;
+} */
+
+.scroll-list {
+  width: 100vh;
+  height: 100vw;
+  background: url("../../public/assets/GG/wordcloudPolos1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center;
 }
 
-.scroll-list2 {
+/* .scroll-list2 {
   width: 100vw;
   height: 100vh;
   background: url("../../public/assets/GG/wordcloudPolos2.jpg");
@@ -1427,6 +1442,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background-repeat: no-repeat;
   overflow: hidden;
   rotate: 90deg;
+} */
+
+.scroll-list2 {
+  width: 100vh;
+  height: 100vw;
+  background: url("../../public/assets/GG/wordcloudPolos2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  transform-origin: center;
 }
 
 .kata {
