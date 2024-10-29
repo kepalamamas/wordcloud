@@ -90,7 +90,8 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         <h1>All List</h1>
         <div className='row'>
           <div className="list-holder">
-            <h2>Data 1</h2>
+            <h2>Nama Tongkrongan</h2>
+            <h3>Total: 312</h3>
             <button onClick={() => handleDeleteAll()}>Delete All Data 1</button>
             {data1.map((data) => {
               return (
@@ -108,7 +109,8 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
             })}
           </div>
           <div className="list-holder">
-            <h2>Data 2</h2>
+            <h2>Mimpi Terlupakan</h2>
+            <h3>Total: 256</h3>
             <button onClick={() => handleDeleteAll2()}>Delete All Data 2</button>
             {data2.map((data) => {
               return (
