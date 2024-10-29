@@ -9,28 +9,28 @@ interface IParagonListProps {}
 const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   const [data1, setData1] = useState<Paragon[]>([
     { id: 1, kata: "nyentrik" },
-    { id: 2, kata: "penguasa kantin" },    
+    { id: 2, kata: "Badut" },
     { id: 4, kata: "tukang bolos" },
-    { id: 5, kata: "si  humoris" },
+    { id: 5, kata: "Bule" },
     { id: 6, kata: "kutu malam" },
     { id: 7, kata: "si penasaran" },
-    { id: 8, kata: "pecinta sambal" },
-    { id: 9, kata: "master debat" },
+    { id: 8, kata: "Kiting" },
+    { id: 9, kata: "Jomblo akut" },
     { id: 10, kata: "suka tidur siang" },
     { id: 11, kata: "ratu gosip" },
-    { id: 12, kata: "ahli ngeles" },
+    { id: 12, kata: "Ambon" },
     { id: 13, kata: "penggemar sepatu bekas" },
     { id: 14, kata: "raja receh" },
     { id: 15, kata: "juragan gorengan" },
-    { id: 16, kata: "tukang selfie" },    
+    { id: 16, kata: "tukang selfie" },
     { id: 18, kata: "penguasa warung kopi" },
     { id: 19, kata: "seniman dadakan" },
-    { id: 20, kata: "pejuang senja" },
+    { id: 20, kata: "Ompong" },
     { id: 21, kata: "jago ngilang" },
-    { id: 22, kata: "ahli parkir" },    
+    { id: 22, kata: "ahli parkir" },
     { id: 23, kata: "spesialis rebahan" },
     { id: 24, kata: "tukang ngerumpi" },
-    { id: 25, kata: "pecandu bakso" },
+    { id: 25, kata: "Kompor" },
     { id: 26, kata: "sultan dadakan" },
     { id: 27, kata: "ahli kasur" },
     { id: 28, kata: "bintang lapangan" },
@@ -110,6 +110,12 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   ]);
   // const [data3, setData3] = useState<Paragon[]>([]);
   const [isLoaded, setIsLoaded] = useState(Boolean);
+  const [itemsToShow, setItemsToShow] = useState(15);
+
+  const handleShowMore = () => {
+    setItemsToShow((prev) => prev + 30); // Increase the limit by 30
+  };
+
   const router = useRouter();
 
   // useEffect(() => {
@@ -191,8 +197,8 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
             <h2>Nama Tongkrongan</h2>
             <h3>Total: 312</h3>
             <button onClick={() => handleDeleteAll()}>Delete All Data 1</button>
-            {data1.map((data) => {
-              return (
+            <div>
+              {data1.slice(0, itemsToShow).map((data) => (
                 <div className="data-item" key={String(data.id)}>
                   {data.kata}
                   <button
@@ -213,8 +219,11 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
                     Detail
                   </button>
                 </div>
-              );
-            })}
+              ))}
+              {itemsToShow < data1.length && (
+                <button onClick={handleShowMore}>Load More</button>
+              )}
+            </div>
           </div>
           <div className="list-holder">
             <h2>Mimpi Terlupakan</h2>
@@ -222,13 +231,13 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
             <button onClick={() => handleDeleteAll2()}>
               Delete All Data 2
             </button>
-            {data2.map((data) => {
-              return (
+            <div>
+              {data2.slice(0, itemsToShow).map((data) => (
                 <div className="data-item" key={String(data.id)}>
                   {data.kata}
                   <button
                     style={{ float: "right" }}
-                    onClick={() => handleDelete2(data.id)}
+                    onClick={() => handleDelete(data.id)}
                   >
                     Delete
                   </button>
@@ -244,8 +253,11 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
                     Detail
                   </button>
                 </div>
-              );
-            })}
+              ))}
+              {itemsToShow < data2.length && (
+                <button onClick={handleShowMore}>Load More</button>
+              )}
+            </div>
           </div>
         </div>
       </div>
