@@ -26,7 +26,7 @@
   animation-name: fadeInUp;
   animation-fill-mode: both;
   padding-bottom: 16rem;
-  background: url("../../public/assets/GG/mobile1.png");
+  background: url("../../public/assets/kuksh/mobile.png");
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -105,7 +105,7 @@
   padding-left: 1rem;
   border: 2px solid;
   border-color: #ffffff;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .inputWrapper input:hover {
@@ -131,13 +131,13 @@
 
 .submit-button {
   font-size: 1.2rem;
-  background-color: #960e0f;
+  background-color: #ed619a;
   color: #ffffff;
   cursor: pointer;
-  border: 2px solid #960e0f;
+  border: 2px solid #ed619a;
   border-radius: 10px;
   padding: 10px 20px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
 
@@ -183,7 +183,7 @@ input::placeholder {
   }
 
   .formParagon {
-    top: 17rem;
+    top: 12rem;
   }
 }
 
@@ -209,7 +209,7 @@ input::placeholder {
   }
 
   .inputWrapper p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .submit-button {
@@ -226,7 +226,7 @@ input::placeholder {
   }   */
 
   .containerFormParagon {
-    background: url("../../public/assets/GG/mobile1.png");
+    background: url("../../public/assets/kuksh/mobile.png");
     background-size: cover;
     background-position: top center;    
     background-repeat: no-repeat;
