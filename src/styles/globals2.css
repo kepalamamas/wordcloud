@@ -92,7 +92,7 @@
 }
 
 .inputWrapper p {
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 .inputWrapper input {
@@ -104,7 +104,8 @@
   border-radius: 1rem;
   padding-left: 1rem;
   border: 2px solid;
-  border-color: #ffffff;
+  border-color: black;
+  color: black;
   font-size: 1rem;
 }
 
@@ -115,7 +116,7 @@
 
 .inputWrapper input:focus,
 .inputWrapper input:active {
-  border: 3px solid #ffffff !important;
+  border: 3px solid black !important;
   outline: none;
 }
 
@@ -144,11 +145,18 @@
 .button-disabled {
   background-color: #9046ab;
   border: 2px solid #9046ab;
+  font-size: 1.2rem;  
+  color: #ffffff;
+  cursor: pointer;  
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #d9b858;
-  border-color: #d9b858;
+  background-color: #ed619a;
+  border-color: #ed619a;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -213,6 +221,11 @@ input::placeholder {
   }
 
   .submit-button {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .button-disabled {
     font-size: 1rem;
     width: 100%;
   }

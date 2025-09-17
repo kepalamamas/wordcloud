@@ -54,10 +54,12 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
         setKata("");
       }
     } catch (error) {
+      setHoldbutton(true);
       console.error(error);
     } finally {
       setTimeout(() => {
         setHoldbutton(true);
+        setKata("");
       }, 1500);
     }
   };
@@ -94,7 +96,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
               {holdButton ? (
                 <button className="submit-button">Submit</button>
               ) : (
-                <button className="submit-button button-disabled" disabled>
+                <button className="button-disabled" disabled>
                   Processing..
                 </button>
               )}
