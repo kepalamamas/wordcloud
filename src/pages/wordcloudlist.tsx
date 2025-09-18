@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Paragon } from '../type';
-import move from './components/mover/RandomObjectMover';
+import move from '../components/mover/RandomObjectMover';
 
 interface IParagonListProps {
 }
@@ -14,7 +14,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
   useEffect(() => {
     if (!isLoaded) {
       axios
-        .get(`https://suryanation.online/api/data1?_sort=id&_order=desc&_limit=30`)
+        .get(`https://kuksh.cloud/api/data1?_sort=id&_order=desc&_limit=30`)
         .then((res) => {
           setData(res.data);
           setIsLoaded(true);
@@ -22,7 +22,7 @@ const ParagonList: React.FunctionComponent<IParagonListProps> = (props) => {
         .catch((err) => console.log(err));
       setInterval(() => {
         axios
-          .get(`https://suryanation.online/api/data1?_sort=id&_order=desc&_limit=30`)
+          .get(`https://kuksh.cloud/api/data1?_sort=id&_order=desc&_limit=30`)
           .then((res) => {
             setData(res.data);
           })

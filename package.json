@@ -8,7 +8,7 @@
     "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "json-server": "json-server ./data/db.json --port 3003",
-    "deploy": "next build && scp -r ./build/* root@209.97.168.125:/var/www/wordcloud/html"
+    "deploy": "next build && scp -r ./out/* root@170.64.166.79:/var/www/wordcloud/html"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

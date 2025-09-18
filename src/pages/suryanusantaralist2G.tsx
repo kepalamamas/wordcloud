@@ -2,7 +2,7 @@ import axios from 'axios';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { Paragon } from '../type';
-import move from './components/mover/RandomObjectMover';
+import move from '../components/mover/RandomObjectMover';
 
 interface IParagonListProps {
 }

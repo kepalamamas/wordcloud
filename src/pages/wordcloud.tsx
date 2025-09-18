@@ -3,7 +3,7 @@ import Image from "next/image";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import logoCurcol from "../../public/assets/curcol/logoCurcol.png";
-import prohibitedWords from "./components/ForbiddenWords";
+import prohibitedWords from "../components/ForbiddenWords";
 
 interface IFormParagonProps {}
 
@@ -42,7 +42,7 @@ const FormParagon: React.FunctionComponent<IFormParagonProps> = (props) => {
       };
 
       const postResponse = await axios.post(
-        "https://suryanation.online/api/data1",
+        "https://kuksh.cloud/api/data1",
         postData,
         {
           headers: { "Content-Type": "application/json" },

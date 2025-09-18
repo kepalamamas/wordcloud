@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/ForbiddenWords.js", "src/components/mover/RandomObjectMover.js"],
   "exclude": ["node_modules"]
 }
